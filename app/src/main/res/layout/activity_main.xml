@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/baiozhuanditu"
+        android:onClick="biaozhun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标准地图"
+        />
+    <Button
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/baiozhuanditu"
+        android:id="@+id/weixingditu"
+        android:onClick="weixing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="卫星地图"
+        />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/yejianditu"
+        android:onClick="yejian"
+        android:layout_toRightOf="@+id/weixingditu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="夜间地图"
+        />
+    <Button
+        android:id="@+id/daohangditu"
+        android:visibility="gone"
+        android:onClick="daohang"
+        android:layout_toRightOf="@+id/yejianditu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="导航地图"
+        />
+    <Button
+        android:id="@+id/lixianditu"
+        android:onClick="lixianditu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进入离线地图"
+        />
+    <Button
+        android:onClick="jietu"
+        android:layout_toRightOf="@+id/lixianditu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="截图"
+        />
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
